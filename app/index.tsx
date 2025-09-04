@@ -40,11 +40,11 @@ export default function HomeScreen() {
 
       <Modal visible = {isModalVisible} animationType ="slide" transparent={false}>
         <View style={{flex: 1, justifyContent: "center", alignItems: "center", padding: 16 }}>
-          <Text style={{fontSize: 24, marginBottom: 12}}>Lag et nytt innlegg</Text>
+          <Text style={{fontSize: 24, marginBottom: 12}}>Add a new post</Text>
 
           {/*TextInput for title */}
           <TextInput
-            placeholder="Tittel"
+            placeholder="Title"
             value={title}
             onChangeText={setTitle}
               style={{
@@ -88,6 +88,18 @@ export default function HomeScreen() {
           >
             <Text style={{color: "white"}}>Add post</Text>
           </Pressable>
+          
+          { /* Button to delete post */}  
+          <Pressable
+            style={{
+              backgroundColor: "red",
+              padding: 10,
+              borderRadius: 6,
+            }}
+          >
+            <Text style={{color: "white"}}>Delete post</Text>
+          </Pressable>
+
 
           {/* Button to close the modal without adding */}
           <Pressable onPress ={() => setIsModalVisible(false)} style={{marginTop: 12}}>
